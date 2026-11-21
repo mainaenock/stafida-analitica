@@ -16,7 +16,7 @@ export default function Contact() {
       <PageIntro label="Contact" title="Let’s talk about" accent="your project."
         description="Tell us what you’re working on, what you need help with and when you need it." />
       <section className="wrap contact-grid section-space" aria-label="Contact options">
-        <div className="contact-direct">
+        <div className="contact-direct" data-reveal>
           <h2>Get in touch directly.</h2>
           <ul>
             <li><span className="icon-box"><MessageCircle size={21} aria-hidden="true" /></span><div><h3>WhatsApp</h3><a href={whatsappLink()} target="_blank" rel="noopener noreferrer">Chat with Stafida Analytica</a></div></li>
@@ -25,7 +25,9 @@ export default function Contact() {
             <li><span className="icon-box"><MapPin size={21} aria-hidden="true" /></span><div><h3>Based in</h3><p>Nairobi, Kenya</p></div></li>
           </ul>
         </div>
-        <Suspense fallback={<EnquiryForm />}><EnquiryWithService /></Suspense>
+        <div data-reveal>
+          <Suspense fallback={<EnquiryForm />}><EnquiryWithService /></Suspense>
+        </div>
       </section>
     </>
   );
