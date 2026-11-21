@@ -14,7 +14,10 @@ export default function Home() {
         <div className="wrap hero-inner">
           <div className="hero-copy entrance">
             <p className="eyebrow light">Research, analytics & advisory</p>
-            <h1 id="hero-title">Clarity in a<br /><em>complex world.</em></h1>
+            <h1 id="hero-title">
+              Clarity in a<br />
+              <em><span className="hero-glitch">complex<span className="hero-glitch-layers" data-word="complex" aria-hidden="true" /></span> world.</em>
+            </h1>
             <p className="hero-description">From market research to risk modelling, we help organisations and researchers make decisions grounded in evidence.</p>
             <div className="actions">
               <Link className="button button-sky" href="/services/">Explore our services</Link>
