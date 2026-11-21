@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: { default: "Stafida Analytica | Research, Analytics & Advisory", template: "%s | Stafida Analytica" },
   description,
   applicationName: business.name,
-  icons: { icon: asset("/mark.svg") },
+  icons: { icon: { url: asset("/stafida-icon.png"), type: "image/png", sizes: "48x48" } },
   openGraph: { type: "website", locale: "en_KE", siteName: business.name, description },
 };
 

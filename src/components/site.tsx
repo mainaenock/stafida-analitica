@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ChartColumnIncreasing, ChartNoAxesCombined, GraduationCap, MapPin, MessagesSquare, ShieldCheck } from "lucide-react";
-import { business, services, whatsappLink } from "@/lib/business";
+import { ChartNoAxesCombined, GraduationCap, MapPin, MessagesSquare, ShieldCheck } from "lucide-react";
+import { asset, business, services, whatsappLink } from "@/lib/business";
 
 export const navigation = [
   { label: "Home", href: "/" },
@@ -24,8 +25,14 @@ export function ServiceIcon({ id, size = 23 }: { id: keyof typeof serviceIcons; 
 export function Brand() {
   return (
     <Link className="brand" href="/" aria-label="Stafida Analytica home">
-      <span className="brand-mark" aria-hidden="true"><ChartColumnIncreasing size={21} strokeWidth={1.7} /></span>
-      <span className="brand-name">STAFIDA <span>ANALYTICA</span></span>
+      <span className="brand-mark" aria-hidden="true">
+        <Image src={asset("/images/stafida-emblem.webp")} alt="" width={256} height={188} loading="eager" />
+      </span>
+      <span className="brand-name" aria-hidden="true">
+        <span className="brand-primary">Stafida</span>
+        <span className="brand-secondary">Analytica</span>
+        <span className="brand-legal">Limited</span>
+      </span>
     </Link>
   );
 }
